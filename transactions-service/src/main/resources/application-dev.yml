@@ -1,0 +1,25 @@
+server:
+  port: 8002
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/gdb_transactions_db
+    username: postgres
+    password: postgres22
+    driver-class-name: org.postgresql.Driver
+
+  flyway:
+    enabled: true
+    baseline-on-migrate: true
+
+logging:
+  level:
+    com.gdb.transactions: DEBUG
+
+transfer:
+  limits:
+    daily-max: 50000.00
+
+external:
+  account-service:
+    url: http://localhost:8001

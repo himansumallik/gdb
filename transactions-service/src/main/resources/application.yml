@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: transactions-service
+  profiles:
+    active: dev
+
+springdoc:
+  api-docs:
+    path: /api/v1/api-docs
+  swagger-ui:
+    path: /api/v1/docs
+
+logging:
+  pattern:
+    console: "%d{yyyy-MM-dd HH:mm:ss} %-5level %logger - %msg%n"
+
+
