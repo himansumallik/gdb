@@ -66,3 +66,20 @@ springdoc:
     operations-sorter: alpha
     tags-sorter: alpha
   packages-to-scan: com.gdb.account.controller
+
+  resilience4j:
+    retry:
+      instances:
+        aadharRetry:
+          maxAttempts: 3
+          waitDuration: 2s
+          retryExceptions:
+            - org.springframework.web.client.ResourceAccessException
+            - org.springframework.web.client.HttpServerErrorException
+            - java.io.IOException
+
+
+  eureka:
+    client:
+      service-url:
+        defaultZone: http://localhost:8761/eureka/

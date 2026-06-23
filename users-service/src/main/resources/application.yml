@@ -45,3 +45,8 @@ springdoc:
     operations-sorter: alpha
     tags-sorter: alpha
   packages-to-scan: com.gdb.users.controller
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
